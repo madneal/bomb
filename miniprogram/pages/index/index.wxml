@@ -1,3 +1,18 @@
 <view>
+<form bindsubmit="bindFormSubmit">
+  <view class="section">
+  <textarea placeholder="粘贴文字到这里" model:value="{{text}}" name="text"></textarea>
+</view>
+<button type="primary" form-type="submit">Bomb</button>
+<button type="default" style="margin-top:10px;" bindtap="clear">Clear</button>
+</form>
+<view>
+<view wx:for="{{result}}" class="lines">
+<view class="line">
+  <text class="text-container">{{item}}</text>
+  <image src="../../images/copy.png" class="icon" bindtap="copy" data-text="{{item}}"></image>
+</view>
+</view>
+</view>
 </view>
 
